@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorPane" prefHeight="481.0" prefWidth="318.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPhoneController">
+   <children>
+      <ImageView fx:id="backgroundPane" fitHeight="491.0" fitWidth="338.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets\Cycling-New-Forest.jpg" />
+         </image></ImageView>
+      <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="480.0" prefWidth="321.0">
+         <children>
+            <Label fx:id="iconLabel" layoutX="50.0" layoutY="100.0" text="N" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="1.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="currentTempLabel" layoutX="17.0" layoutY="117.0" text="20°C" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label id="middlePhoneLabels" fx:id="chanceOFRainLabel" layoutX="13.0" layoutY="249.0" stylesheets="@style.css" text="Chance of rain:" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label id="middlePhoneLabels" fx:id="windspeedLabel" layoutX="13.0" layoutY="272.0" stylesheets="@style.css" text="Windspeed:" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label id="middlePhoneLabels" fx:id="visibilityLabel" layoutX="14.0" layoutY="295.0" stylesheets="@style.css" text="Visibility:" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="descLabel" layoutX="13.0" layoutY="149.0" text="Snowing Heavily" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label id="phoneWarningLabel" fx:id="alertLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="21.0" prefWidth="339.0" stylesheets="@style.css" text="Riding Weather" textAlignment="CENTER" textFill="#2f0c0c" />
+            <Button id="settings_button_phone" fx:id="settingsButton" contentDisplay="GRAPHIC_ONLY" layoutX="1.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToSettings" stylesheets="@style.css" text="Settings" />
+            <Button id="tips_button_phone" fx:id="tipsButton" contentDisplay="GRAPHIC_ONLY" layoutX="216.0" layoutY="28.0" mnemonicParsing="false" onAction="#goToTips" prefHeight="26.0" prefWidth="67.0" stylesheets="@style.css" text="Tips" />
+            <Label id="cityname" fx:id="cityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="83.0" prefHeight="19.0" prefWidth="331.0" stylesheets="@style.css" text="London" textAlignment="CENTER" />
+            <AnchorPane id="dayPane" layoutX="3.0" layoutY="353.0" opacity="0.78" prefHeight="86.0" prefWidth="334.0" stylesheets="@style.css">
+               <children>
+                  <AnchorPane id="day1" fx:id="day1box" prefHeight="86.0" prefWidth="66.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day1name" layoutX="19.0" layoutY="7.0" text="Day 1" textFill="WHITE" />
+                        <Label fx:id="day1icon" layoutX="19.0" layoutY="30.0" text="N" textFill="WHITE" />
+                        <Label fx:id="day1temp" layoutX="8.0" layoutY="58.0" text="Label" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="day2" fx:id="day2box" layoutX="67.0" prefHeight="86.0" prefWidth="66.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day2name" layoutX="19.0" layoutY="6.0" text="Day 2" textFill="WHITE" />
+                        <Label fx:id="day2icon" layoutX="21.0" layoutY="28.0" text="N" textFill="WHITE" />
+                        <Label fx:id="day2temp" layoutX="8.0" layoutY="58.0" text="Label" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="day3" fx:id="day3box" layoutX="134.0" prefHeight="86.0" prefWidth="65.6" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day3name" layoutX="21.0" layoutY="6.0" text="Day 3" textFill="WHITE" />
+                        <Label fx:id="day3icon" layoutX="19.0" layoutY="27.0" text="N" textFill="WHITE" />
+                        <Label fx:id="day3temp" layoutX="8.0" layoutY="58.0" text="Label" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="day4" fx:id="day4box" layoutX="201.0" prefHeight="86.0" prefWidth="65.6" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day4name" layoutX="19.0" layoutY="6.0" text="Day 4" textFill="WHITE" />
+                        <Label fx:id="day4icon" layoutX="20.0" layoutY="28.0" text="N" textFill="WHITE" />
+                        <Label fx:id="day4temp" layoutX="8.0" layoutY="58.0" text="Label" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="day5" fx:id="day5box" layoutX="268.0" prefHeight="86.0" prefWidth="65.6" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day5name" layoutX="19.0" layoutY="6.0" text="Day 5" textFill="WHITE" />
+                        <Label fx:id="day5icon" layoutX="20.0" layoutY="28.0" text="N" textFill="WHITE" />
+                        <Label fx:id="day5temp" layoutX="8.0" layoutY="58.0" text="Label" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <HBox layoutX="13.0" layoutY="172.0">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/sunrise.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                        <Label fx:id="sunriseLabel" styleClass="daylight" stylesheets="@style.css" text="Label" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/sunset.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="1.0" />
+                           </effect>
+                        </ImageView>
+                        <Label fx:id="sunsetLabel" styleClass="daylight" stylesheets="@style.css" text="Label" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button id="xdevice" fx:id="changeDevice" contentDisplay="GRAPHIC_ONLY" layoutX="3.0" layoutY="446.0" mnemonicParsing="false" onAction="#changeDeviceScene" stylesheets="@style.css" text="Change Device" />
+         </children>
+      </AnchorPane>
+      <Pane id="settingsBg" fx:id="settingsPane" prefHeight="491.0" prefWidth="337.0" stylesheets="@style.css" visible="false">
+         <children>
+            <ImageView fitHeight="491.0" fitWidth="339.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/Cycling-New-Forest_phone.png" />
+               </image>
+            </ImageView>
+            <Pane prefHeight="54.0" prefWidth="336.0">
+               <children>
+                  <Button id="main_screen" fx:id="s_backButton" contentDisplay="GRAPHIC_ONLY" layoutY="7.0" mnemonicParsing="false" onAction="#backToMain" stylesheets="@style.css" text="Main screen" />
+               </children>
+            </Pane>
+            <Pane layoutY="169.0" prefHeight="33.0" prefWidth="336.0">
+               <children>
+                  <Label id="middlePhoneLabels" layoutX="113.0" layoutY="9.0" stylesheets="@style.css" text="Alerts" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Button id="phoneAlertButton" fx:id="s_alertsButton" contentDisplay="GRAPHIC_ONLY" layoutX="171.0" layoutY="3.0" mnemonicParsing="false" onAction="#changeAlertsVisibility" stylesheets="@style.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="3.0" layoutY="208.0" prefHeight="54.0" prefWidth="331.0">
+               <children>
+                  <Label id="middlePhoneLabels" layoutX="112.0" layoutY="18.0" stylesheets="@style.css" text="Tips" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <Button id="phoneTipButton" fx:id="s_tipsButton" contentDisplay="GRAPHIC_ONLY" layoutX="168.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeTipsVisibility" stylesheets="@style.css" text="Button" />
+               </children>
+            </Pane>
+            <Pane layoutX="69.0" layoutY="244.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label id="middlePhoneLabels" alignment="CENTER" layoutX="-72.0" layoutY="49.0" prefHeight="22.0" prefWidth="345.0" stylesheets="@style.css" text="Location" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="s_locationTextField" layoutX="18.0" layoutY="74.0" onAction="#changeLocation" />
+                  <Button id="save_phoneButton" fx:id="s_locationButton" contentDisplay="GRAPHIC_ONLY" layoutX="52.0" layoutY="106.0" mnemonicParsing="false" onAction="#changeLocation" prefHeight="27.0" prefWidth="102.0" stylesheets="@style.css" text="Change" />
+               </children>
+            </Pane>
+            <Label id="cityname" fx:id="s_settingsLabel" alignment="CENTER" layoutX="3.0" layoutY="85.0" prefHeight="30.0" prefWidth="334.0" stylesheets="@style.css" text="Settings" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

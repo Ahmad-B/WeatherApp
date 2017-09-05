@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainpane" fx:id="backgroundPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainTabletController">
+   <children>
+      <VBox prefHeight="768.0" prefWidth="1024.0">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="1024.0">
+               <children>
+                  <Label id="warning" fx:id="alertLabel" alignment="CENTER" prefHeight="55.0" prefWidth="1024.0" stylesheets="@style.css" text="RIDING WEATHER" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox prefHeight="450.0" prefWidth="1024.0" VBox.vgrow="NEVER">
+               <children>
+                  <VBox prefHeight="400.0" prefWidth="1183.0" HBox.hgrow="NEVER">
+                     <children>
+                        <Label fx:id="cityLabel" maxWidth="592.0" prefHeight="93.0" styleClass="main_big" stylesheets="@style.css" text="LONDON">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label id="main_desc" fx:id="descLabel" maxWidth="592.0" stylesheets="@style.css" text="CLOUDY">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="-12.0" />
+                           </padding>
+                        </Label>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label id="celsius" fx:id="currentTempLabel" stylesheets="@style.css" text="-20 C°">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label id="main_icon" fx:id="iconLabel" alignment="CENTER" ellipsisString="" maxHeight="88.0" stylesheets="@style.css" text="N">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="40.0" top="-8.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="-29.0" />
+                           </padding>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                                       <image>
+                                          <Image url="@assets/sunrise.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <effect>
+                                          <ColorAdjust brightness="1.0" />
+                                       </effect>
+                                    </ImageView>
+                                    <Label fx:id="sunriseLabel" styleClass="daylight" stylesheets="@style.css" text="Label" GridPane.rowIndex="1" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                       <image>
+                                          <Image url="@assets/sunset.png" />
+                                       </image>
+                                       <effect>
+                                          <ColorAdjust brightness="1.0" />
+                                       </effect>
+                                    </ImageView>
+                                    <Label fx:id="sunsetLabel" styleClass="daylight" stylesheets="@style.css" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets top="-5.0" />
+                           </padding>
+                        </HBox>
+                        <Label fx:id="chanceOFRainLabel" styleClass="middlelabels" stylesheets="@style.css" text="CHAINCE OF RAIN">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="windspeedLabel" styleClass="middlelabels" stylesheets="@style.css" text="WINDSPEED">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="visibilityLabel" styleClass="middlelabels" stylesheets="@style.css" text="VISIBILITY">
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin></Label>
+                        <ImageView fx:id="openSettingsButton" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#openSettings" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/cog.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="40.0" top="23.0" />
+                           </VBox.margin>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="400.0" prefWidth="1024.0">
+                     <children>
+                        <Pane fx:id="tipsPane" layoutX="393.0" prefHeight="400.0" prefWidth="450.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="468.0" layoutX="-40.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" width="450.0" x="40.0" />
+                              <Button id="toggle" fx:id="openTipsButton" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxWidth="400.0" mnemonicParsing="false" onAction="#changeTips" prefHeight="400.0" prefWidth="40.0" stylesheets="@style.css" textFill="TRANSPARENT" />
+                              <Label fx:id="actual_tips" alignment="CENTER_RIGHT" layoutX="63.0" layoutY="27.0" prefHeight="279.0" prefWidth="358.0" textAlignment="CENTER" wrapText="true">
+                                 <opaqueInsets>
+                                    <Insets left="10.0" right="10.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding></Label>
+                              <ImageView fx:id="tips1" fitHeight="141.0" fitWidth="345.0" layoutX="72.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/tips.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="tips" fitHeight="141.0" fitWidth="345.0" layoutX="72.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/tips1.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox id="day1" fx:id="day1box" prefHeight="200.0" prefWidth="188.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day1name" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="day1">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day1icon" alignment="CENTER" maxHeight="50.0" prefWidth="188.0" text="N">
+                           <padding>
+                              <Insets top="-10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day1temp" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="-2 C°" />
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox id="day2" fx:id="day2box" prefHeight="200.0" prefWidth="188.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day2name" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="day2">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day2icon" alignment="CENTER" maxHeight="50.0" prefWidth="188.0" text="N">
+                           <padding>
+                              <Insets top="-10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day2temp" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="-2 C°" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="day3" fx:id="day3box" prefHeight="200.0" prefWidth="188.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day3name" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="day3">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day3icon" alignment="CENTER" maxHeight="50.0" prefWidth="188.0" text="N">
+                           <padding>
+                              <Insets top="-10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day3temp" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="-2 C°" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="day4" fx:id="day4box" prefHeight="200.0" prefWidth="188.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day4name" alignment="CENTER" contentDisplay="TOP" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="day4">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day4icon" alignment="CENTER" maxHeight="50.0" prefWidth="188.0" text="N">
+                           <padding>
+                              <Insets top="-10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day4temp" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="-4 C°" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox id="day5" fx:id="day5box" prefHeight="200.0" prefWidth="188.0" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="day5name" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="day5">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day5icon" alignment="CENTER" maxHeight="25.0" prefWidth="188.0" text="N">
+                           <padding>
+                              <Insets top="-10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="day5temp" alignment="CENTER" prefWidth="188.0" styleClass="days" stylesheets="@style.css" text="-3 C°" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="3.0" />
+               </VBox.margin>
+            </HBox>
+            <Button id="xdevice" fx:id="changeDevice" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#changeDeviceScene" stylesheets="@style.css" text="Change Device">
+               <VBox.margin>
+                  <Insets left="32.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

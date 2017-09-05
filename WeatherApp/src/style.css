@@ -1,0 +1,266 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 25, 2016, 3:13:33 PM
+    Author     : laszlojmoricz
+*/
+
+@font-face {
+        font-family: "MyriadPro";
+        font-style: normal;
+        src: local("Grandesign Regular"), url("assets/MyriadPro-Bold.otf") format("opentype"); /* non-IE */
+}
+
+#phoneAlertButton{
+    -fx-background-color: transparent; 
+}
+
+#phoneTipButton{
+    -fx-background-color: transparent; 
+}
+
+
+
+.days{
+-fx-font-size: 15;
+-fx-text-fill: white;
+-fx-font-weight: bold;
+}
+
+.daylight{
+-fx-font-size: 15;
+-fx-text-fill: white;
+-fx-font-weight: bold;  
+}
+
+.middlelabels{
+-fx-font-size: 30;
+-fx-font-family:Myriad Pro;
+-fx-font-weight: bold;
+-fx-text-fill: white;
+}
+
+#middlePhoneLabels{
+    -fx-font-size: 17;
+    -fx-font-family:Myriad Pro;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.main_big{
+-fx-font-size: 60;
+-fx-font-family:Myriad Pro;
+-fx-text-fill: white;
+-fx-font-weight: bold;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+.settings_text {
+ -fx-font-size: 9;   
+}
+
+#settingsBg {
+ -fx-background-color: #9c9c9c;   
+}
+
+
+
+#toggle {
+-fx-background-image: url('assets/toggle.png');
+-fx-background-color: transparent;
+-fx-focus-color: transparent;
+}
+
+#toggle:hover {
+-fx-background-image: url('assets/toggle_over.png');
+-fx-focus-color: transparent;
+}
+
+#toggle:pressed, .button:default:hover:pressed {
+-fx-background-image: url('assets/toggle_active.png');
+-fx-focus-color: transparent;
+}
+
+#toggle_open {
+-fx-background-image: url('assets/toggle_back.png');
+-fx-background-color: transparent;
+-fx-focus-color: transparent;
+}
+
+#toggle_open:hover {
+-fx-background-image: url('assets/toggle_back_over.png');
+-fx-focus-color: transparent;
+}
+
+#toggle_open:pressed, .button:default:hover:pressed {
+-fx-background-image: url('assets/toggle_back_active.png');
+-fx-focus-color: transparent;
+}
+
+#warning {
+-fx-font-size: 22;
+-fx-text-fill: white;
+-fx-font-weight: bold;
+-fx-background-color: linear-gradient(darkolivegreen, green);
+-fx-background-opacity: .95;
+}
+
+#mainpane{
+-fx-background-image: url('assets/foggy.png');
+-fx-background-size: cover, auto;
+}
+
+#changedevice{
+-fx-background-image: url('assets/changedevice.png');
+-fx-background-color: transparent;
+-fx-focus-color: transparent;
+}
+
+#changedevice:hover {
+-fx-background-image: url('assets/changedevice_over.png');
+-fx-focus-color: transparent;
+}
+
+#main_desc{
+-fx-font-size: 30;
+-fx-text-fill: grey;
+-fx-font-weight: bold;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#celsius{
+-fx-font-size: 80;
+-fx-text-fill: white;
+-fx-font-weight: lighter;
+-fx-letter-spacing: 2px;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+#scrollpane{
+-fx-background-color: transparent;    
+}
+
+#dayPane{
+    -fx-background-color: black;
+}
+
+#phoneWarningLabel{
+    -fx-background-color: linear-gradient(darkolivegreen, green);
+}
+
+#anchorPane{
+    -fx-background-color: #9c9c9c;  
+}
+
+#day1{
+    -fx-background-color: #9c9c9c;
+    -fx-box-sizing: 10;
+    -fx-background-opacity: 0.78;
+    
+}
+#actual_tips{
+    -fx-font-size: 15;
+-fx-text-fill: white;
+-fx-font-weight: bold;  
+}
+#day2{
+    -fx-background-color: #808080;
+     -fx-background-opacity: 0.78;
+}
+
+#day3{
+    -fx-background-color: #9c9c9c;
+     -fx-background-opacity: 0.78;
+}
+
+#day4{
+    -fx-background-color: #808080;
+     -fx-background-opacity: 0.78;
+}
+
+#day5{
+    -fx-background-color: #9c9c9c;
+     -fx-background-opacity: 0.28;
+}
+
+.toggle-button {
+  -fx-graphic: url('assets/toggleoff.png');
+  -fx-background-color: transparent;
+-fx-focus-color: transparent;
+  
+}
+
+.toggle-button:selected {
+  -fx-graphic: url('assets/toggleon.png');
+  -fx-background-color: transparent;
+-fx-focus-color: transparent;
+}
+#save_button
+{
+  -fx-graphic: url('assets/save.png');
+}
+#cancel_button
+{
+  -fx-graphic: url('assets/cancel.png');
+}
+
+#toggleTips
+{
+    -fx-font-weight: bold;
+    -fx-font-family: Myriad Pro;
+    -fx-font-size: 34pt;
+    -fx-font-color: black;
+}
+#toggleAlerts
+{
+    -fx-font-weight: bold;
+    -fx-font-family: Myriad Pro;
+    -fx-font-size: 34pt;
+}
+#locationSettings
+{
+    -fx-font-weight: bold;
+    -fx-font-family: Myriad Pro;
+    -fx-font-size: 34pt;
+    -fx-font-color: black;
+}
+
+#save_phoneButton{
+-fx-background-image: url('assets/save_phone.png');
+-fx-focus-color: transparent;    
+}
+
+#xdevice{
+-fx-graphic: url("assets/change_device1.png");
+-fx-background-color: transparent;    
+}
+
+#settings_button_phone{
+-fx-graphic: url("assets/change_device1.png");
+-fx-background-color: transparent;    
+}
+
+
+#settings_button_phone{
+-fx-graphic: url("assets/settings_phone.png");
+-fx-background-color: transparent;    
+}
+
+#tips_button_phone{
+-fx-graphic: url("assets/tips_phone.png");
+-fx-background-color: transparent;    
+}
+
+#cityname{
+   -fx-font-size: 25;
+-fx-text-fill: white;
+-fx-font-weight: bold; 
+}
+
+#main_screen{
+-fx-graphic: url("assets/mainscreen_phone.png");
+-fx-background-color: transparent;    
+}

@@ -1,0 +1,21 @@
+=================
+Fair
+-----------------
+The weather is currently fine, please make sure before you start your journey that you make sure your bike is in good condition: Make sure that your tyres are in good condition, Test your brakes to make sure that they work and oil your chain.
+=================
+Rain
+-----------------
+It's currently raining, please make sure that you have a waterproof jacket, mudguards that will allows you keep the water from spraying on your legs, lights as visibility is a lot lower in the rain.
+=================
+Fog
+-----------------
+It's currently foggy, As visibility is low, please advise that it would be recommended to have strong flashing lights on their bike such as a Blackburn light and Hi-viz clothing so that cyclists can be seen by other road users.
+=================
+Snow
+-----------------
+Please advise that it is currently not recommended to cycle in the snow as roads tend to be slippery. If you must cycle, please make sure that you wear appropriate clothing as the weather will be very cold. 
+=================
+chance
+-----------------
+There is a high chance of rain today, please make sure that you have a waterproof jacket, mudguards that will allows you keep the water from spraying on your legs, lights as visibility is a lot lower in the rain.
+================
